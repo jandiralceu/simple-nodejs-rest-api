@@ -1,11 +1,12 @@
 import fastify from "fastify";
 
-import { knex } from "./database";
+import { transactionsRoutes } from "./routes/transactions";
 
 const app = fastify();
 
-app.get("/hello", async () => {
-  return (await knex("sqlite_schema").select("*"));
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
+app.register(transactionsRoutes, {
+  prefix: "transactions"
 });
 
 app.listen({ port: 3333 })
