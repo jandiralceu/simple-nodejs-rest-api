@@ -1,15 +1,17 @@
-import fastify from 'fastify'
+import fastify from "fastify";
 
-const app = fastify()
+import { knex } from "./database";
 
-app.get('/hello', () => {
-  return 'Hello World!'
-})
+const app = fastify();
+
+app.get("/hello", async () => {
+  return (await knex("sqlite_schema").select("*"));
+});
 
 app.listen({ port: 3333 })
   .then(() => {
-    console.log('Server is running...')
+    console.log("Server is running...");
   })
-  .catch((reason) => {
-    console.log('Error on running the application...')
-  })
+  .catch((_) => {
+    console.log("Error on running the application...");
+  });

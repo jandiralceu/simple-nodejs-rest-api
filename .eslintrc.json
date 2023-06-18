@@ -10,5 +10,14 @@
         "project": ["./tsconfig.json"]
     },
     "rules": {
+        "@typescript-eslint/quotes": [
+            "error",
+            "double",
+            {
+              "avoidEscape": true,
+              "allowTemplateLiterals": true
+            }
+          ],
+        "@typescript-eslint/semi": ["error", "always"]
     }
 }
