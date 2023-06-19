@@ -19,8 +19,6 @@ describe("should test transactions", () => {
   });
 
   beforeEach(() => {
-    // execSync("npx knex migrate:rollback --all");
-
     knex("transactions").clear("columns");
   });
 
