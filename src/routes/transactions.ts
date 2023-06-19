@@ -67,10 +67,4 @@ export async function transactionsRoutes (app: FastifyInstance): Promise<void> {
 
     return reply.status(201).send();
   });
-  // app.put("/", async () => {
-  //   return (await knex("transactions").where("amount", 1000).select("*"));
-  // });
-  // app.delete("/", async () => {
-  //   return (await knex("transactions").where("amount", 1000).select("*"));
-  // });
 }

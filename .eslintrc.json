@@ -30,6 +30,7 @@
         "comma-dangle": ["error", "never"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/return-await": "off",
-        "@typescript-eslint/no-floating-promises": "off"
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/restrict-template-expressions": "off"
     }
 }

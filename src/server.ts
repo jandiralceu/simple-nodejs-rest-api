@@ -1,16 +1,7 @@
-import fastify from "fastify";
-import cookie from "@fastify/cookie";
-import { transactionsRoutes } from "./routes/transactions";
+import { app } from "./app";
+import { env } from "./env";
 
-const app = fastify();
-// eslint-disable-next-line
-app.register(cookie);
-// eslint-disable-next-line
-app.register(transactionsRoutes, {
-  prefix: "transactions"
-});
-
-app.listen({ port: 3333 })
+app.listen({ port: env.PORT })
   .then(() => {
     console.log("Server is running...");
   })

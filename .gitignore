@@ -3,3 +3,4 @@ node_modules
 db/app.db
 api_rest_nodejs.iml
 .env
+.env.test
