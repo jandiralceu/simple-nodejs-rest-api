@@ -2,16 +2,17 @@
   "name": "api_rest_nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/server.js",
   "engines": {
-    "node": ">=18"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint:dev": "eslint src --ext .ts --fix",
     "test:watch": "vitest",
     "build": "tsup src",
-    "migration:latest": "knex migrate:latest"
+    "migration:latest": "knex migrate:latest",
+    "migration:rollback": "knex migrate:rollback"
   },
   "keywords": [],
   "author": "Jandir A. Cutabiala <me@jandir.co>",
