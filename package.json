@@ -6,12 +6,12 @@
   "engines": {
     "node": ">=18"
   },
-  "private": true,
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint:dev": "eslint src --ext .ts --fix",
     "test:watch": "vitest",
-    "build": "tsup src"
+    "build": "tsup src",
+    "migration:latest": "knex migrate:latest"
   },
   "keywords": [],
   "author": "Jandir A. Cutabiala <me@jandir.co>",
